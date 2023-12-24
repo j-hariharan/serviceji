@@ -5,6 +5,13 @@
     --accent: #55b9a4;
     --header-height: 100px;
     --gradient-background: linear-gradient(to top right, #254B43 , black);
+
+    --green: #005666;
+    --blue: #181f4c;
+    --teal: #60bcc4;
+    --red: #8e0000;
+    --white: #ffffff;
+    
     font-size: 18px;
 }
 
@@ -13,10 +20,6 @@
     font-family: 'League Spartan', sans-serif;
     padding: 0;
     margin: 0;
-}
-
-body {
-    margin-top: var(--header-height);
 }
 
 .button-large {
@@ -49,22 +52,23 @@ body {
 
     background-color: black;
     color: white;
+    box-shadow: 0 2px 5px #ffffff99;
+
+    transition-duration: 300ms;
+    transition-timing-function: ease-out;
 }
 
-#header #left {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 40px;
+#header.hidden {
+    background-color: transparent;
+    box-shadow: none;
 }
 
-#header #left #ham {
-    height: 50px;
-    cursor: pointer;
-}
-
-#header #left #logo {
+#header #logo {
     height: 80px;
+}
+
+#header.hidden .button-large {
+    visibility: hidden;
 }
 
 
@@ -73,88 +77,12 @@ body {
         padding: 0px 10px;
     }
 
-    #header #left {
-        gap: 10px;
-    }
-
     #header .button-large {
         padding: 12px 20px;
     }
 
-    #header #left #ham {
-        height: 40px;
-    }
-
-    #header #left #logo {
+    #header #logo {
         height: 65px;
-    }
-}
-
-
-
-
-
-
-
-#nav-veil {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 5;
-    
-    background-color: #000000aa;
-    display: none;
-}
-
-#nav-veil.active {
-    display: block;
-}
-
-
-#nav {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    z-index: 10;
-
-    width: 100%;
-    height: calc(100vh - var(--header-height));
-    max-width: 400px;
-    background-color: black;
-    box-shadow: inset -2px 0px 0px #ffffff55;
-
-    transform: translateX(-100%);
-
-    display: flex;
-    flex-direction: column;
-    padding: 20px 30px 0px 30px;
-}
-
-#nav.open {
-    transition: 0.7s;
-    transform: translateX(0%);
-}
-
-#nav.closed {
-    transition: 0.7s;
-}
-
-
-#nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 500;
-    padding: 20px;
-    border-bottom: 1px solid #aaaaaa;
-}
-
-
-@media (max-width: 400px) {
-    #nav a {
-        font-size: 20px;
     }
 }
 
@@ -187,14 +115,10 @@ body {
 
 
 footer {
-    position: absolute;
-    bottom: 0px;
     color: rgb(255, 255, 255);
-    padding: 25px 0px 10px 0px;
+    padding: 10px 0px;
     width: 100%;
     /* Height of the footer*/ 
-    height: 70px;
     background: #4fac98;
-    text-align:center;
-    vertical-align: middle;
+    text-align: center;
 }
