@@ -3,7 +3,6 @@
 
 :root {
     --accent: #55b9a4;
-    --header-height: 100px;
     --gradient-background: linear-gradient(to top right, #254B43 , black);
 
     --green: #005666;
@@ -38,9 +37,8 @@
 
 
 #header {
-    height: var(--header-height);
     width: 100%;
-    padding: 0px 40px;
+    padding: 10px 40px;
 
     display: flex;
     justify-content: space-between;
@@ -72,17 +70,21 @@
 }
 
 
-@media (max-width: 500px) {
+
+
+@media (max-width: 800px) {
     #header {
-        padding: 0px 10px;
+        position: relative;
+        padding: 10px 30px;
+    }
+
+    #header #logo {
+        height: 60px;
     }
 
     #header .button-large {
         padding: 12px 20px;
-    }
-
-    #header #logo {
-        height: 65px;
+        font-size: 18px;
     }
 }
 

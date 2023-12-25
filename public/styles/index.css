@@ -1,8 +1,8 @@
 #cover {
     width: 100%;
     overflow: hidden;
-    color: white;
     max-height: 100vh;
+    background-color: black;
 }
 
 
