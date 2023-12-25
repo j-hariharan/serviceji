@@ -18,10 +18,6 @@ function resizeCallback () {
         header.classList.remove("hidden")
         video.style.translate = "0"
     }
-    else {
-        header.style.position = "fixed"
-        about.style.marginTop = 0
-    }
 }
 
 resizeCallback()
@@ -35,16 +31,6 @@ function setOffset () {
 
         if (scrollY > cover_height/2) header.classList.remove("hidden")
         else header.classList.add("hidden")
-    } else {
-        if (scrollY >= cover_height) {
-            header.style.position = "fixed"
-            about.style.marginTop = "80px"
-            window.scrollTo({ y: scrollY + 80 })
-        }
-        else {
-            header.style.position = "relative"
-            about.style.marginTop = 0
-        }
     }
 
     requestAnimationFrame(setOffset)

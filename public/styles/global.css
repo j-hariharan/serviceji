@@ -56,25 +56,29 @@
     transition-timing-function: ease-out;
 }
 
-#header.hidden {
-    background-color: transparent;
-    box-shadow: none;
-}
-
 #header #logo {
     height: 80px;
 }
 
-#header.hidden .button-large {
-    visibility: hidden;
+
+@media (min-width: 801px) {
+    #header.hidden {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    #header.hidden .button-large {
+        visibility: hidden;
+    }
 }
 
 
-
-
 @media (max-width: 800px) {
+    body {
+        margin-top: 100px;
+    }
+
     #header {
-        position: relative;
         padding: 10px 30px;
     }
 
