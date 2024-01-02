@@ -305,6 +305,7 @@
     color: white;
     font-size: 25px;
     font-weight: 700;
+    text-decoration: none;
     transition: 150ms;
 }
 
