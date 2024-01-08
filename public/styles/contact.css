@@ -1,0 +1,148 @@
+body {
+    background: linear-gradient(to right, var(--green), black, var(--green));
+    padding-top: 160px;
+    color: white;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding-top: 130px;
+    }
+}
+
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+h2 {
+    max-width: 600px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+
+form {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+form .field {
+    position: relative;
+    margin: 40px 0px;
+}
+
+form .field label {
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    left: 10px;
+    transition: 400ms;
+    color: #bbbbbb;
+}
+
+form .field input {
+    width: 100%;
+    background-color: #ffffff55;
+    padding: 30px 10px 10px 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff55;
+    transition: 400ms;
+}
+
+form .field input:focus,
+form .field input:not(:placeholder-shown) {
+    border-bottom-color: var(--accent);
+}
+
+
+form .field input:focus~label,
+form .field input:not(:placeholder-shown)~label,
+#dropdown div:not(:empty)~label {
+    /* font-weight: 700; */
+    color: var(--accent);
+    font-weight: 600;
+    top: 16px;
+    font-size: 15px;
+}
+
+
+form .button {
+    padding: 15px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--accent);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+form .button:hover {
+    opacity: 0.9;
+}
+
+
+
+
+#dropdown div {
+    height: 60px;
+    padding: 30px 10px 10px 10px;
+    background-color: #ffffff55;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff55;
+    cursor: pointer;
+}
+
+#dropdown .choices {
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    list-style-type: none;
+    background-color: #ddddddee;
+    border-radius: 0px 0px 5px 5px;
+    color: black;
+    z-index: 10;
+    width: 100%;
+    transition: 400ms;
+}
+
+#dropdown.open .choices {
+    height: calc(48px * 5);
+}
+
+#dropdown .choices li {
+    padding: 15px 15px;
+    cursor: pointer;
+    border-bottom: 1px dotted var(--green);
+    transition: 250ms;
+}
+
+#dropdown .choices li:hover {
+    background-color: #e5e5e5ee;
+}
+
+#dropdown #down {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    translate: 0 -50%;
+    transition: 400ms;
+}
+
+#dropdown.open #down {
+    rotate: 180deg;
+}
