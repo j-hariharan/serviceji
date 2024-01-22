@@ -23,7 +23,7 @@
 
 body {
     position: relative;
-    min-height: 100vh;
+    min-height: 100svh;
 }
 
 .button-large {
@@ -51,6 +51,7 @@ body {
 
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 100;
 
     background-color: black;

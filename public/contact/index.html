@@ -17,21 +17,37 @@
 </head>
 <body>
     <header id="header">
-        <img id = "logo" src="images/logo.png" alt="">
+        <a href="/"><img id = "logo" src="images/logo.png" alt=""></a>
         <a class="button-large">Contact us</a>
     </header>
 
     <h1>Contact Us</h1>
     <h2>Fill in your Requirements and we will get back to you at the earliest!</h2>
 
-    <form action="">
+
+
+    <!--
+        https://docs.google.com/forms/d/e/1FAIpQLSf04lYG_yUmAvQe1ivLExNq01sfNPbw986sr2ci6NZKcjdVVw/formResponse
+        (name) entry.775844745
+        (phone) entry.1137502356
+        (service) entry.1592562147
+        (email) entry.1257058822
+    -->
+
+    <iframe name="googleform"></iframe>
+
+    <form 
+        action="https://docs.google.com/forms/d/e/1FAIpQLSf04lYG_yUmAvQe1ivLExNq01sfNPbw986sr2ci6NZKcjdVVw/formResponse" 
+        target="googleform"
+        onsubmit="onSubmit()"
+    >
         <div class="field">
-            <input placeholder="" required type="text" id="name">
+            <input placeholder="" required type="text" id="name" name="entry.775844745">
             <label for="name">Name</label>
         </div>
 
         <div class="field">
-            <input placeholder="" required type="text" id="phone">
+            <input placeholder="" required type="text" id="phone" name="entry.1137502356">
             <label for="phone">Phone Number</label>
         </div>
 
@@ -46,14 +62,17 @@
                 <li>Advertisement</li>
                 <li>Shorts / Reels</li>
             </ul>
+
+            <input type="text" name="entry.1592562147">
         </div>
 
         <div class="field">
-            <input placeholder="" required type="email" id="email">
+            <input placeholder="" required type="email" id="email" name="entry.1257058822">
             <label for="email">Email ID</label>
         </div>
 
         <button type="submit" class="button">Submit</button>
+        <div id="message">Submitted successfully! We will get back to you shortly.</div>
     </form>
 
 

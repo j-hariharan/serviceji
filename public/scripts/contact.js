@@ -1,8 +1,11 @@
 let dropdown = document.querySelector("#dropdown")
 let service_textbox = dropdown.querySelector("#service")
+let service_input = dropdown.querySelector("input")
+let message = document.querySelector("form #message")
 let choices = dropdown.querySelector(".choices")
 let dropdown_opened = false
 let selected = ""
+
 
 document.addEventListener("click", () => {
     dropdown_opened = false
@@ -32,3 +35,8 @@ function render () {
 }
 
 requestAnimationFrame(render)
+
+function onSubmit () {
+    service_input.value = selected
+    message.style.display = "block"
+}
