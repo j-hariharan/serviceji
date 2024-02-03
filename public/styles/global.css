@@ -73,9 +73,9 @@ body {
         box-shadow: none;
     }
 
-    #header.hidden .button-large {
+    /* #header.hidden .button-large {
         visibility: hidden;
-    }
+    } */
 }
 
 
